@@ -5,24 +5,24 @@ import { selectSalary } from '../salary/salarySlice';
 import { TaxResults } from './TaxResults';
 
 export const TaxList = () => {
-    const dispatch = useDispatch();
-    const taxRateStatus = useSelector(selectLoadingStatus);
-    const salary = useSelector(selectSalary);
+  const dispatch = useDispatch();
+  const taxRateStatus = useSelector(selectLoadingStatus);
+  const salary = useSelector(selectSalary);
 
-    let content;
+  let content;
 
-    if (taxRateStatus === 'loading') {
-        content = <div className="loader">Loading...</div>;
-    } else if (taxRateStatus === 'succeeded' && salary > 1) {
-        content = <TaxResults />;
-    } else if (taxRateStatus === 'failed') {
-        dispatch(fetchTaxRate());
-        console.log('Trying to FETCH from API again...');
-    }
+  if (taxRateStatus === 'loading') {
+    content = <div className='loader'>Loading...</div>;
+  } else if (taxRateStatus === 'succeeded' && salary > 1) {
+    content = <TaxResults />;
+  } else if (taxRateStatus === 'failed') {
+    dispatch(fetchTaxRate());
+    console.log('Trying to FETCH from API again...');
+  }
 
-    return (
-        <section>
-            <div>{content}</div>
-        </section>
-    );
+  return (
+    <section>
+      <div>{content}</div>
+    </section>
+  );
 };

@@ -8,9 +8,9 @@ Clone this repository and:
 * Install dependencies using npm: npm install
 * Start app in development mode: npm start
 * Run tests: npm test
-* Run ESLint: eslint
+* Run ESLint: npx eslint yourfile.js
 
 ## Improvements I Would Make
 
 * Write more unit tests
-* Refactor reducers for taxSlice.js
+* Refactor reducers
