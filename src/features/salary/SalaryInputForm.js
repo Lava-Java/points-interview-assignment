@@ -24,17 +24,17 @@ export const SalaryInputForm = () => {
         <section>
             <h2>Enter Your Salary</h2>
             <form>
-                <label htmlFor="salary">Salary:</label>
+                <label htmlFor='salary'>Salary:</label>
                 <input
-                    type="number"
-                    id="salary"
-                    name="salary"
+                    type='number'
+                    id='salary'
+                    name='salary'
                     value={salary}
                     placeholder={0}
                     onChange={onSalaryChange}
                 />
                 <button
-                    type="button"
+                    type='button'
                     disabled={!canSubmit}
                     onClick={onSubmitClicked}
                 >
