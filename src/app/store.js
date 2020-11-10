@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import taxReducer from '../features/tax/taxSlice';
+import salaryReducer from '../features/salary/salarySlice';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    tax: taxReducer,
+    salary: salaryReducer
   },
 });
