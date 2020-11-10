@@ -19,6 +19,7 @@ const taxSlice = createSlice({
   reducers: {
     calculateTaxableIncome(state, action) {
       const salary = action.payload;
+      state.totalTax = 0;
       for (let i = 0; i < state.taxRate.length; i++) {
         const prevElement = i - 1;
         // Check if the salary fits in the current tax bracket, or if the salary is higher than $214368
